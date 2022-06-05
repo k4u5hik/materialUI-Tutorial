@@ -5,8 +5,16 @@ import Button from '@material-ui/core/Button';
 function App() {
   return (
     <div className='App'>
-      <header className='App-header'>
-        <Button  size="large" variant='contained' color='secondary' style={{fontSize:20}}>
+      <header className='App-header'> 
+        <Button
+          onClick={() => {
+            alert("clicked");
+          }}
+          size='large'
+          variant='contained'
+          color='secondary'
+          style={{ fontSize: 20 }}
+        >
           Hello World!
         </Button>
         <img src={logo} className='App-logo' alt='logo' />
