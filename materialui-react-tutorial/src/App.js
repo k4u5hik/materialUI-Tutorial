@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Button, ButtonGroup, Checkbox, FormControlLabel} from '@material-ui/core';
+import { Button, ButtonGroup, Checkbox, FormControlLabel, TextField} from '@material-ui/core';
 // import Button from '@material-ui/core/Button';
 import SaveIcon from '@material-ui/icons/Save';
 import DeleteIcon from "@material-ui/icons/Delete";
@@ -31,6 +31,7 @@ function App() {
   return (
     <div className='App'>
       <header className='App-header'>
+        <TextField id="outlined-basic" label="Outlined" variant="outlined" />
         <CheckboxExample />
         <ButtonGroup
           variant='contained'
