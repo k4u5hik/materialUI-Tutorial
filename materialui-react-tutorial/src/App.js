@@ -31,7 +31,7 @@ function App() {
   return (
     <div className='App'>
       <header className='App-header'>
-        <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+        <TextField id="outlined-basic" label="Outlined" variant="outlined" color='secondary' type='date' />
         <CheckboxExample />
         <ButtonGroup
           variant='contained'
