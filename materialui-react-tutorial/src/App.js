@@ -9,30 +9,28 @@ function App() {
   return (
     <div className='App'>
       <header className='App-header'>
-        <ButtonGroup>
-          <Button
-          startIcon={<SaveIcon />}
-          onClick={() => {
-            alert("Save Clicked");
-          }}
-          size='large'
+        <ButtonGroup
           variant='contained'
+          size='large'
           color='primary'
           style={{ fontSize: 20 }}
+        >
+          <Button
+            startIcon={<SaveIcon />}
+            onClick={() => {
+              alert("Save Clicked");
+            }}
           >
-          Save
+            Save
           </Button>
           <Button
-          startIcon={<DeleteIcon />}
-          onClick={() => {
-            alert("Discard Clicked");
-          }}
-          size='large'
-          variant='contained'
-          color='secondary'
-          style={{ fontSize: 20 }}
+            startIcon={<DeleteIcon />}
+            onClick={() => {
+              alert("Discard Clicked");
+            }}
+            color='secondary'
           >
-          Discard
+            Discard
           </Button>
         </ButtonGroup>
         <img src={logo} className='App-logo' alt='logo' />
