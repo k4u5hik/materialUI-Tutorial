@@ -1,14 +1,37 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { ButtonGroup } from '@material-ui/core';
-import Button from '@material-ui/core/Button';
+import { Button, ButtonGroup, Checkbox, FormControlLabel} from '@material-ui/core';
+// import Button from '@material-ui/core/Button';
 import SaveIcon from '@material-ui/icons/Save';
 import DeleteIcon from "@material-ui/icons/Delete";
+// import { Checkbox } from '@material-ui/core';
+
+function CheckboxExample ( ) {
+  const [checked, setChecked] = React.useState(true);
+return (
+  <FormControlLabel
+    control={<Checkbox
+    checked={checked}
+    onChange={(e) => setChecked(e.target.checked)}
+    icon={<DeleteIcon />}
+    checkedIcon={<SaveIcon/>}
+    color='primary'
+    value='checkedA'
+    inputProps={{
+      "aria-label": "primary checkbox",
+    }}
+    />}
+    label='Testing Checkbox'
+    />
+);
+}
 
 function App() {
   return (
     <div className='App'>
       <header className='App-header'>
+        <CheckboxExample />
         <ButtonGroup
           variant='contained'
           size='large'
@@ -32,6 +55,14 @@ function App() {
           >
             Discard
           </Button>
+        </ButtonGroup>
+        <ButtonGroup
+          variant='contained'
+          aria-label='outlined primary button group'
+        >
+          <Button>One</Button>
+          <Button>Two</Button>
+          <Button>Three</Button>
         </ButtonGroup>
         <img src={logo} className='App-logo' alt='logo' />
       </header>
