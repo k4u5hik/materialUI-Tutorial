@@ -3,6 +3,7 @@ import './App.css';
 import { ButtonGroup } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import SaveIcon from '@material-ui/icons/Save';
+import DeleteIcon from "@material-ui/icons/Delete";
 
 function App() {
   return (
@@ -11,7 +12,6 @@ function App() {
         <ButtonGroup>
           <Button
           startIcon={<SaveIcon />}
-          endIcon={<SaveIcon />}
           onClick={() => {
             alert("Save Clicked");
           }}
@@ -23,8 +23,7 @@ function App() {
           Save
           </Button>
           <Button
-          startIcon={<SaveIcon />}
-          endIcon={<SaveIcon />}
+          startIcon={<DeleteIcon />}
           onClick={() => {
             alert("Discard Clicked");
           }}
