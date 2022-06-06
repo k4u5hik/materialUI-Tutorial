@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Button, ButtonGroup, Checkbox, FormControlLabel, TextField} from '@material-ui/core';
+import { Button, ButtonGroup, Checkbox, FormControlLabel, TextField, Typography} from '@material-ui/core';
 // import Button from '@material-ui/core/Button';
 import SaveIcon from '@material-ui/icons/Save';
 import DeleteIcon from "@material-ui/icons/Delete";
@@ -9,6 +9,7 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import { makeStyles, ThemeProvider, createTheme } from '@material-ui/core/styles';
 import { orange, green } from '@material-ui/core/colors';
 import 'fontsource-roboto';
+// import Typography from '@material-ui/core';
 
 const useStyles = makeStyles({
   root: {
@@ -66,6 +67,7 @@ function App() {
     <ThemeProvider theme={theme}>
     <div className='App'>
       <header className='App-header'>
+        <Typography variant='h2'> MUI React Tutorial</Typography>
         <ButtonStyled />
         <TextField id="outlined-basic" label="Outlined" variant="outlined" color='secondary' type='email' label='The Email' placeholder='test@test.com'/>
         <CheckboxExample />
