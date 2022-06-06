@@ -6,6 +6,27 @@ import { Button, ButtonGroup, Checkbox, FormControlLabel, TextField} from '@mate
 import SaveIcon from '@material-ui/icons/Save';
 import DeleteIcon from "@material-ui/icons/Delete";
 // import { Checkbox } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+  root: {
+    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+    border: 0,
+    marginBottom: 15,
+    borderRadius: 15,
+    color: 'white',
+    padding: '0 30px',
+    }
+})
+
+function ButtonStyled() {
+  const classes = useStyles();
+  return (
+    <Button variant='contained' className={classes.root}>
+      Custom Styled Button
+    </Button>
+  );
+}
 
 function CheckboxExample ( ) {
   const [checked, setChecked] = React.useState(true);
@@ -31,6 +52,7 @@ function App() {
   return (
     <div className='App'>
       <header className='App-header'>
+        <ButtonStyled />
         <TextField id="outlined-basic" label="Outlined" variant="outlined" color='secondary' type='email' label='The Email' placeholder='test@test.com'/>
         <CheckboxExample />
         <ButtonGroup
