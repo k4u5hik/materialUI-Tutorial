@@ -146,14 +146,14 @@ function App() {
                 Discard
               </Button>
             </ButtonGroup>
-            <ButtonGroup
+            {/* <ButtonGroup
               variant='contained'
               aria-label='outlined primary button group'
             >
               <Button>One</Button>
               <Button>Two</Button>
               <Button>Three</Button>
-            </ButtonGroup>
+            </ButtonGroup> */}
             <img src={logo} className='App-logo' alt='logo' />
           </header>
         </div>
