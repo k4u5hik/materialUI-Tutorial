@@ -90,12 +90,10 @@ function App() {
         <div className='App'>
           <header className='App-header'>
             <Typography variant='h2' component='div'>
-              {" "}
-              MUI React Tutorial
+              {" MUI React Tutorial "}
             </Typography>
             <Typography variant='subtitle1'>
-              {" "}
-              Learn how to use Material UI
+              {"Learn how to use Material UI "}
             </Typography>
             <ButtonStyled />
 
