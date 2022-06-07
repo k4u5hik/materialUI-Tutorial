@@ -11,6 +11,8 @@ import { orange, green } from '@material-ui/core/colors';
 import 'fontsource-roboto';
 // import Typography from '@material-ui/core';
 // import Container from '@material-ui/core';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles({
   root: {
@@ -85,49 +87,76 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Container maxWidth='sm'>
-    <div className='App'>
-      <header className='App-header'>
-        <Typography variant='h2' component="div"> MUI React Tutorial</Typography>
-        <Typography variant='subtitle1'> Learn how to use Material UI</Typography>
-        <ButtonStyled />
-        <TextField id="outlined-basic" label="Outlined" variant="outlined" color='secondary' type='email' label='The Email' placeholder='test@test.com'/>
-        <CheckboxExample />
-        <ButtonGroup
-          variant='contained'
-          size='large'
-          color='primary'
-          style={{ fontSize: 20 }}
-          >
-          <Button
-            startIcon={<SaveIcon />}
-            onClick={() => {
-              alert("Save Clicked");
-            }}
+        <div className='App'>
+          <header className='App-header'>
+            <Typography variant='h2' component='div'>
+              {" "}
+              MUI React Tutorial
+            </Typography>
+            <Typography variant='subtitle1'>
+              {" "}
+              Learn how to use Material UI
+            </Typography>
+            <ButtonStyled />
+
+            <Grid container space={2} justify="center">
+              <Grid item>
+                <Paper style={{ height: 75, width: 50, }} />
+              </Grid>
+              <Grid item>
+                <Paper style={{ height: 75, width: 50, }} />
+              </Grid>
+              <Grid item>
+                <Paper style={{ height: 75, width: 50, }} />
+              </Grid>
+            </Grid>
+
+            <TextField
+              id='outlined-basic'
+              label='Outlined'
+              variant='outlined'
+              color='secondary'
+              type='email'
+              label='The Email'
+              placeholder='test@test.com'
+            />
+            <CheckboxExample />
+            <ButtonGroup
+              variant='contained'
+              size='large'
+              color='primary'
+              style={{ fontSize: 20 }}
             >
-            Save
-          </Button>
-          <Button
-            startIcon={<DeleteIcon />}
-            onClick={() => {
-              alert("Discard Clicked");
-            }}
-            color='secondary'
+              <Button
+                startIcon={<SaveIcon />}
+                onClick={() => {
+                  alert("Save Clicked");
+                }}
+              >
+                Save
+              </Button>
+              <Button
+                startIcon={<DeleteIcon />}
+                onClick={() => {
+                  alert("Discard Clicked");
+                }}
+                color='secondary'
+              >
+                Discard
+              </Button>
+            </ButtonGroup>
+            <ButtonGroup
+              variant='contained'
+              aria-label='outlined primary button group'
             >
-            Discard
-          </Button>
-        </ButtonGroup>
-        <ButtonGroup
-          variant='contained'
-          aria-label='outlined primary button group'
-          >
-          <Button>One</Button>
-          <Button>Two</Button>
-          <Button>Three</Button>
-        </ButtonGroup>
-        <img src={logo} className='App-logo' alt='logo' />
-      </header>
-    </div>
-    </Container>
+              <Button>One</Button>
+              <Button>Two</Button>
+              <Button>Three</Button>
+            </ButtonGroup>
+            <img src={logo} className='App-logo' alt='logo' />
+          </header>
+        </div>
+      </Container>
     </ThemeProvider>
   );
 }
