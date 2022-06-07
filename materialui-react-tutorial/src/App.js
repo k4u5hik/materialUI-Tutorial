@@ -68,6 +68,7 @@ function App() {
     <div className='App'>
       <header className='App-header'>
         <Typography variant='h2'> MUI React Tutorial</Typography>
+        <Typography variant='subtitle1'> Learn how to use Material UI</Typography>
         <ButtonStyled />
         <TextField id="outlined-basic" label="Outlined" variant="outlined" color='secondary' type='email' label='The Email' placeholder='test@test.com'/>
         <CheckboxExample />
