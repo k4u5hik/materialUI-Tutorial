@@ -99,7 +99,7 @@ function App() {
             </Typography>
             <ButtonStyled />
 
-            <Grid container space={2} justify="center">
+            <Grid container spacing={4} justify="center">
               <Grid item>
                 <Paper style={{ height: 75, width: 50, }} />
               </Grid>
@@ -111,7 +111,7 @@ function App() {
               </Grid>
             </Grid>
 
-            <TextField
+            {/* <TextField
               id='outlined-basic'
               label='Outlined'
               variant='outlined'
@@ -119,7 +119,8 @@ function App() {
               type='email'
               label='The Email'
               placeholder='test@test.com'
-            />
+            /> */}
+
             <CheckboxExample />
             <ButtonGroup
               variant='contained'
