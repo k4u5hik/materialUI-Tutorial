@@ -1,10 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Button, ButtonGroup, Container, Checkbox, FormControlLabel, TextField, Typography} from '@material-ui/core';
+import { AppBar, Toolbar, IconButton, Button, ButtonGroup, Container, Checkbox, FormControlLabel, TextField, Typography} from '@material-ui/core';
 // import Button from '@material-ui/core/Button';
 import SaveIcon from '@material-ui/icons/Save';
 import DeleteIcon from "@material-ui/icons/Delete";
+import MenuIcon from '@material-ui/icons/Menu';
 // import { Checkbox } from '@material-ui/core';
 import { makeStyles, ThemeProvider, createTheme } from '@material-ui/core/styles';
 import { orange, green } from '@material-ui/core/colors';
@@ -13,6 +14,8 @@ import 'fontsource-roboto';
 // import Container from '@material-ui/core';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+
+// import AppBar from '@material-ui/core';
 
 const useStyles = makeStyles({
   root: {
@@ -89,6 +92,20 @@ function App() {
       <Container maxWidth='sm'>
         <div className='App'>
           <header className='App-header'>
+            <AppBar position='static'>
+              <Toolbar>
+                <IconButton edge='start' color='inherit' aria-label='menu'>
+                  <MenuIcon />
+                </IconButton>
+                <Typography variant='h6'>
+                  Appbar
+                </Typography>
+            <Button>
+              Login
+            </Button>
+              </Toolbar>
+            </AppBar>
+
             <Typography variant='h2' component='div'>
               {" MUI React Tutorial "}
             </Typography>
