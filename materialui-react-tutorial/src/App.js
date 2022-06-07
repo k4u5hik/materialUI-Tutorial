@@ -92,7 +92,7 @@ function App() {
       <Container maxWidth='sm'>
         <div className='App'>
           <header className='App-header'>
-            <AppBar position='static'>
+            <AppBar>
               <Toolbar>
                 <IconButton edge='start' color='inherit' aria-label='menu'>
                   <MenuIcon />
