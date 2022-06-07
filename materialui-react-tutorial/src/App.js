@@ -23,14 +23,32 @@ const useStyles = makeStyles({
 })
 
 const theme = createTheme({
-  palette: {
-    primary: {
-      main: orange[500],
+  typography: {
+    h2: {
+      fontSize: 36,
+      fontWeight: 'bold',
+      color: '#FE6B8B',
+      textAlign: 'center',
+      marginBottom: 15,
     },
-    secondary: {
-      main: green[500],
+    subtitle1: {
+      fontSize: 24,
+      fontWeight: 'bold',
+      fontFamily: 'Roboto',
+      color: '#FF8E53',
+      textAlign: 'center',
+      marginBottom: 15,
     },
   },
+    
+    palette: {
+      primary: {
+        main: orange[500],
+      },
+      secondary: {
+        main: green[500],
+      },
+    },
 });
 
 function ButtonStyled() {
